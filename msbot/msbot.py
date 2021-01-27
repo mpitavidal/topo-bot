@@ -9,9 +9,21 @@ ADDRESS_ARXIV = "https://tud365.webhook.office.com/webhookb2/b30f04eb-e52a-4b70-
 
 def send_msteams_update(database=DATABASE, address=ADDRESS_ARXIV):
     """
-    TODO: add docstring
-    """
+    For each of the papers in a database, sends a message to a teams channel
+    containing information about the paper.
 
+    Parameters
+    ----------
+    database : str
+        File containing the database.
+
+    address : str
+        Address to the Microsoft Webhook for the channel of interest.
+
+    Doesn't return anything.
+
+    """
+    
     data_lastday = pd.read_pickle(database)
 
     n_papers = len(data_lastday["title"])   # Number of papers in the dataframe
@@ -27,20 +39,20 @@ def send_msteams_update(database=DATABASE, address=ADDRESS_ARXIV):
 
 def fill_message(data_lastday, index_paper, message):
     """
-    Modifies the message addint to it the information about the paper.
+    Modifies the message adding to it the information about a paper.
 
     Parameters
     ----------
     data_lastday : pandas.core.frame.DataFrame
-        Should at least have the following keys:
+        Should at least have the following elements:
         "title" : Title of the paper (str).
         "link" : Link to the paper in the arXiv (str).
 
     index_paper : int
-        kdslfkjsdlkfs
+        Index of the paper in the dataframe.
 
     message : pymsteams.connectorcard
-        -----
+        Message to update with the information of the paper.
 
     Doesn't return anything.
     """

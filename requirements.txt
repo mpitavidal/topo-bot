@@ -1,8 +1,11 @@
 numpy
 matplotlib
+time
+sys
+pandas
+schedule
+datetime
+feedparser
 pymsteams
 python-telegram-bot
-feedparser
-datetime
-schedule
-time
+arxiv_majorana_crawler

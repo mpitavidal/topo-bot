@@ -13,18 +13,20 @@ def do_one_run():
     print("Started updating...")
     database_upd.database_upd(query_input='search_query_list.txt', 
                               database_output="data_lastday.pkl")
-    print("Database updated at {}".format(time.time))
+    print("Database updated at {}".format(time.time()))
     msbot.send_msteams_update(database="data_lastday.pkl")
-    print("Sent message to Teams at {}".format(time.time))
+    print("Sent message to Teams at {}".format(time.time()))
     post_on_tg.post_the_message(database="data_lastday.pkl")
-    print("Sent message to Telegram at {}".format(time.time))
+    print("Sent message to Telegram at {}".format(time.time()))
 
 
-# schedule.every().day.at("12:41").do(do_one_run)
-schedule.every(1).minutes.do(do_one_run)
+# Schedule a job every day at 08:00
+# schedule.every().day.at("08:00").do(do_one_run)
+schedule.every(1).minutes.do(do_one_run) # Testing
 
 
 while True:
+    # Every2 minutes, run all scheduled jobs:
     schedule.run_pending()
     # time.sleep(120)
-    time.sleep(1)
+    time.sleep(1) # Testing

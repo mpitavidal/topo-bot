@@ -11,8 +11,22 @@ import pandas as pd
 
 QUERY_INPUT='search_query_list.txt'
 DATABASE_OUTPUT='data_lastday.pkl'
+
 def database_upd(query_input=QUERY_INPUT, database_output=DATABASE_OUTPUT):
-  
+    """
+    Update the database of interesting papers and save it.
+    
+    Parameters
+    ----------
+    query_input : str
+        File containing the imput to the arXiv query.
+
+    database_output : str
+        File on which the generated database is saved.
+
+    Doesn't return anything
+    """
+    
     data_upd=fetch_arxiv.query_arxiv_org(query_input)
 
     data=pd.DataFrame(data_upd)
