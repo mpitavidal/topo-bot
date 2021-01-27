@@ -11,7 +11,7 @@ import pandas as pd
 
 QUERY_INPUT='search_query_list.txt'
 DATABASE_OUTPUT='data_lastday.pkl'
-def database_upd(query_input=QUERY_INPUT,database_output=DATABASE_OUTPUT):
+def database_upd(query_input=QUERY_INPUT, database_output=DATABASE_OUTPUT):
   
     data_upd=fetch_arxiv.query_arxiv_org(query_input)
 

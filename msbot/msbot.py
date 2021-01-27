@@ -19,7 +19,7 @@ def send_msteams_update(database=DATABASE, address=ADDRESS_ARXIV):
     for i in range(n_papers):
         
         # Create the connectorcard object with the Microsoft Webhook 
-        message = pymsteams.connectorcard(address_arxiv)
+        message = pymsteams.connectorcard(address)
         msbot.fill_message(data_lastday, i, message)
         message.send()
 
