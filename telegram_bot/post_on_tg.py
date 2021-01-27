@@ -7,14 +7,14 @@
 import telegram 
 import pandas as pd
 from telegram.ext import Updater
-def post_the_message():
+#DATABASE='..\data_lastday.pkl'
+def post_the_message(database):
     updater = Updater(token='1598945607:AAGpjZu4t7zh4Mok6baddPQ9KxZZ2ngnCbk', use_context=True)
     dispatcher = updater.dispatcher
     import logging
     logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                          level=logging.INFO)
     bot = telegram.Bot(token='1598945607:AAGpjZu4t7zh4Mok6baddPQ9KxZZ2ngnCbk')
-    database = '..\data_lastday.pkl'
     data_lastday = pd.read_pickle(database)
     author_list=data_lastday['author_list']
     titles=data_lastday['title']
