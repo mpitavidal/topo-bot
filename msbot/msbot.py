@@ -6,7 +6,7 @@ DATABASE = '..\data_lastday.pkl'# Define Microsoft Webhook URL
 ADDRESS_GENERAL = "https://tud365.webhook.office.com/webhookb2/b30f04eb-e52a-4b70-9920-d9e52953b8ca@096e524d-6929-4030-8cd3-8ab42de0887b/IncomingWebhook/9f828c3733af424a8fdb5875c373b239/e21735a8-e851-494f-99ba-2e0e9cfe3b6d"
 ADDRESS_ARXIV = "https://tud365.webhook.office.com/webhookb2/b30f04eb-e52a-4b70-9920-d9e52953b8ca@096e524d-6929-4030-8cd3-8ab42de0887b/IncomingWebhook/e8044a75137048fcb8eb0d604c097e2e/e21735a8-e851-494f-99ba-2e0e9cfe3b6d"
 
-def send_telegram_update(database=DATABASE, address=ADDRESS_ARXIV):
+def send_msteams_update(database=DATABASE, address=ADDRESS_ARXIV):
     """
     TODO: add docstring
     """
