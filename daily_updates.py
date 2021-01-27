@@ -15,9 +15,9 @@ def do_one_run():
                               database_output="data_lastday.pkl")
     print("Database updated at {}".format(time.time))
     msbot.send_msteams_update(database="data_lastday.pkl")
-    print("Sent message to Teams {}".format(time.time))
+    print("Sent message to Teams at {}".format(time.time))
     post_on_tg.post_the_message()
-    print("Sent message to Telegram {}".format(time.time))
+    print("Sent message to Telegram at {}".format(time.time))
 
 
 # schedule.every().day.at("12:41").do(do_one_run)
@@ -26,4 +26,5 @@ schedule.every(1).minutes.do(do_one_run)
 
 while True:
     schedule.run_pending()
-    time.sleep(120)
+    # time.sleep(120)
+    time.sleep(1)
