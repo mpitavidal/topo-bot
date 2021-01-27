@@ -20,11 +20,13 @@ def do_one_run():
     print("Sent message to Telegram at {}".format(time.time()))
 
 
-# schedule.every().day.at("12:41").do(do_one_run)
-schedule.every(1).minutes.do(do_one_run)
+# Schedule a job every day at 08:00
+# schedule.every().day.at("08:00").do(do_one_run)
+schedule.every(1).minutes.do(do_one_run) # Testing
 
 
 while True:
+    # Every2 minutes, run all scheduled jobs:
     schedule.run_pending()
     # time.sleep(120)
-    time.sleep(1)
+    time.sleep(1) # Testing
