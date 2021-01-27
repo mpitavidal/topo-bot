@@ -20,9 +20,8 @@ def send_msteams_update(database=DATABASE, address=ADDRESS_ARXIV):
         
         # Create the connectorcard object with the Microsoft Webhook 
         message = pymsteams.connectorcard(address)
-        msbot.fill_message(data_lastday, i, message)
+        fill_message(data_lastday, i, message)
         message.send()
-
 
 
 
@@ -50,7 +49,6 @@ def fill_message(data_lastday, index_paper, message):
     text = ""
     for key in data_lastday:
         text += (key + ": " + str(data_lastday[key][index_paper]) + "\n")
-        print(key, data_lastday[key][0])
 
     button_text = "Go to paper in arXiv"
     paper_link = data_lastday["link"][index_paper]
