@@ -1,5 +1,3 @@
-#import sys
-#sys.path.append(path_arxiv_crawler)
 import feedparser
 import datetime
 path_arxiv_crawler_1 = "../"
@@ -7,9 +5,10 @@ path_arxiv_crawler_2 = "../arxiv_majorana_crawler"
 import sys
 sys.path.append(path_arxiv_crawler_1)
 sys.path.append(path_arxiv_crawler_2)
+
 from arxiv_majorana_crawler import fetch_arxiv
 import pandas as pd
-#QUERY_INPUT = 'C:\\Users\\tesya\\OneDrive\\Документы\\GitHub\\arxiv_majorana_crawler\\search_query_list.txt'
+
 QUERY_INPUT='search_query_list.txt'
 DATABASE_OUTPUT='data_lastday.pkl'
 def bot_upd(query_input=QUERY_INPUT,database_output=DATABASE_OUTPUT):
@@ -28,5 +27,5 @@ def bot_upd(query_input=QUERY_INPUT,database_output=DATABASE_OUTPUT):
     delta = datetime.timedelta(days=2)
     
 
-    data_lastday = pd.DataFrame.to_dict(data.loc[data['published'] > (now - delta)])
+    data_lastday = data.loc[data['published'] > (now - delta)]
     pd.to_pickle(data_lastday, database_output)
