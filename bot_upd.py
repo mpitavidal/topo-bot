@@ -2,8 +2,8 @@
 #sys.path.append(path_arxiv_crawler)
 import feedparser
 import datetime
-path_arxiv_crawler_1 = "/../"
-path_arxiv_crawler_2 = "/../arxiv_majorana_crawler"
+path_arxiv_crawler_1 = "../"
+path_arxiv_crawler_2 = "../arxiv_majorana_crawler"
 import sys
 sys.path.append(path_arxiv_crawler_1)
 sys.path.append(path_arxiv_crawler_2)
