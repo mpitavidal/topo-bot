@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[52]:
-
-
 import telegram 
 import pandas as pd
 from telegram.ext import Updater
@@ -27,10 +21,3 @@ def post_the_message(database):
         telegram_text=telegram_text+ published[i].strftime("%m/%d/%Y")+ "\n \n"+"'"+ titles[i]+ "'" +"\n \n"+author_list[i]+"\n"+links[i]+"\n"+arxiv_primary_categories[i] +"\n \n \n"
         bot.sendMessage(chat_id='@openmajoranachannel', text=telegram_text)
     return 
-
-
-# In[ ]:
-
-
-
-
