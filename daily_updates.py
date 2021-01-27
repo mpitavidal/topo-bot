@@ -1,7 +1,7 @@
 import schedule
 import time
 from msbot import msbot
-# from telegram_bot import ???
+from telegram_bot import post_on_tg
 import database_upd
 
 
@@ -14,7 +14,7 @@ def do_one_run():
     database_upd.database_upd(query_input='search_query_list.txt', 
                               database_output="data_lastday.pkl")
     msbot.send_msteams_update(database="data_lastday.pkl")
-    # telegram_bot.send_telegram_update()
+    post_on_tg.post_the_message()
 
 
 schedule.every().day.at("12:34").do(do_one_run)
