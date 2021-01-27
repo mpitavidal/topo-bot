@@ -1,11 +1,15 @@
 def fill_message(paper, message):
     """
-    .......
+    Modifies the message addint to it the information about the paper.
 
     Parameters
     ----------
-    paper : dictionary
-        ----
+    paper : dict
+        Dictionary with information about the paper, whould at least
+        have the following keys:
+        "title" : Title of the paper (str).
+        "link" : Link to the paper in the arXiv (str).
+
     message : pymsteams.connectorcard
         -----
 
