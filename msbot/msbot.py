@@ -27,20 +27,20 @@ def send_msteams_update(database=DATABASE, address=ADDRESS_ARXIV):
 
 def fill_message(data_lastday, index_paper, message):
     """
-    Modifies the message addint to it the information about the paper.
+    Modifies the message adding to it the information about a paper.
 
     Parameters
     ----------
     data_lastday : pandas.core.frame.DataFrame
-        Should at least have the following keys:
+        Should at least have the following elements:
         "title" : Title of the paper (str).
         "link" : Link to the paper in the arXiv (str).
 
     index_paper : int
-        kdslfkjsdlkfs
+        Index of the paper in the dataframe.
 
     message : pymsteams.connectorcard
-        -----
+        Message to update with the information of the paper.
 
     Doesn't return anything.
     """
