@@ -18,16 +18,11 @@ def database_upd(query_input=QUERY_INPUT, database_output=DATABASE_OUTPUT):
     
     Parameters
     ----------
-    data_lastday : pandas.core.frame.DataFrame
-        Should at least have the following elements:
-        "title" : Title of the paper (str).
-        "link" : Link to the paper in the arXiv (str).
+    query_input : str
+        File containing the imput to the arXiv query.
 
-    index_paper : int
-        Index of the paper in the dataframe.
-
-    message : pymsteams.connectorcard
-        Message to update with the information of the paper.
+    database_output : str
+        File on which the generated database is saved.
 
     Doesn't return anything
     """
