@@ -7,17 +7,17 @@ import database_upd
 
 def do_one_run():
     """
-    TODO: Add docstring
+    Fetch the arXive, update the database with the new relevant papers from the day
+    and send update to both Teams and Telegram.
     """
-    print("Updating")
-    # Update database with latest relevant arXiv papers
+    print("Started updating...")
     database_upd.database_upd(query_input='search_query_list.txt', 
                               database_output="data_lastday.pkl")
-    print("Database updated")
+    print("Database updated at {}".format(time.time))
     msbot.send_msteams_update(database="data_lastday.pkl")
-    print("Sent message to Teams")
+    print("Sent message to Teams {}".format(time.time))
     post_on_tg.post_the_message()
-    print("Sent message to Telegram")
+    print("Sent message to Telegram {}".format(time.time))
 
 
 # schedule.every().day.at("12:41").do(do_one_run)
