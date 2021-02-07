@@ -36,7 +36,7 @@ def database_upd(query_input=QUERY_INPUT, database_output=DATABASE_OUTPUT):
     data['published'] = data['published'].apply(_convert_time)
 
     now = datetime.datetime.now()
-    delta = datetime.timedelta(days=2)
+    delta = datetime.timedelta(days=4) #the time window of update, has to be 1 when not in test mode
     
     data_lastday = data.loc[data['published'] > (now - delta)]
     pd.to_pickle(data_lastday, database_output)
