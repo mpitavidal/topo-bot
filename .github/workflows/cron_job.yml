@@ -4,13 +4,11 @@ name: cron_job
 
 on:
   schedule:
-    # * is a special character in YAML so you have to quote this string
-    #- cron:  '00 10 * * *' #every day at 10 #when not in test mode
-    - cron:  '*/40 * * * *'
-   # Steps represent a sequence of tasks that will be executed as part of the job
+    #- cron:  '00 10 * * *' #every day at 10 when not in test mode
+    - cron:  '*/5 * * * *'
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Install Python 3
@@ -22,5 +20,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements_cron_job.txt
       - name: Run daily_updates
-        run: python cron_job_for_github.py 
+        run:  |
+         python database_manipulation.py
+         python database_upd.py
+         python cron_job_for_github.py
+         python print('i'm still alive') 
 
