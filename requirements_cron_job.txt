@@ -1,7 +1,7 @@
 numpy
-sys
 pandas
-datetime
+DateTime
+sys
 feedparser
 pymsteams
 python-telegram-bot
