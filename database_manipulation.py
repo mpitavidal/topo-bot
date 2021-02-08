@@ -39,7 +39,7 @@ def create_html(df, filename):
     soup.head.insert(1, mathjaxtag2)
     mathjaxtag1 = soup.new_tag('script')
     mathjaxtag1.attrs['type'] = 'text/x-mathjax-config'
-    mathjaxtag1.append(r"MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});")
+    mathjaxtag1.append("MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});") #deleted r here in front of "math
     soup.head.insert(1, mathjaxtag1)
 
     csstag = soup.new_tag('style')
