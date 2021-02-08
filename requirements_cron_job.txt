@@ -4,3 +4,4 @@ DateTime
 feedparser
 pymsteams
 python-telegram-bot
+bs4
