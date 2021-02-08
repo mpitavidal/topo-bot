@@ -6,7 +6,8 @@ import sys
 sys.path.append(path_arxiv_crawler_1)
 sys.path.append(path_arxiv_crawler_2)
 
-from arxiv_majorana_crawler import fetch_arxiv
+#from arxiv_majorana_crawler import fetch_arxiv
+import fetch_arxiv
 import pandas as pd
 
 QUERY_INPUT='search_query_list.txt'
