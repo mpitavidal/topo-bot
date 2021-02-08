@@ -5,7 +5,7 @@ name: cron_job
 on:
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron:  '00 10 * * *' #runs every 5 mins, to test
+    - cron:  '00 10 * * *' #every day at 10
    # Steps represent a sequence of tasks that will be executed as part of the job
 jobs:
   build:
