@@ -4,8 +4,8 @@ name: cron_job
 
 on:
   schedule:
-    #- cron:  '00 10 * * *' #every day at 10 when not in test mode
-    - cron:  '*/5 * * * *'
+    - cron:  '00 10 * * *' #every day at 10 when not in test mode
+    #- cron:  '*/5 * * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
