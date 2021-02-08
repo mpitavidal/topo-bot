@@ -4,4 +4,3 @@ DateTime
 feedparser
 pymsteams
 python-telegram-bot
-arxiv_majorana_crawler
