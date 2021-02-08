@@ -1,5 +1,4 @@
 numpy
-matplotlib
 time
 sys
 pandas
