@@ -1,0 +1,8 @@
+numpy
+sys
+pandas
+datetime
+feedparser
+pymsteams
+python-telegram-bot
+arxiv_majorana_crawler
