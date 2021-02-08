@@ -23,6 +23,7 @@ jobs:
           pip install -r requirements_cron_job.txt
       - name: Run daily_updates
         run:  |
+         python database_manipulation.py
          python database_upd.py
          python cron_job_for_github.py 
 
