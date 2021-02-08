@@ -17,5 +17,5 @@ jobs:
         with:
           python-version: 3.8
       - name: Run daily_updates
-        run: daily_updates 
+        run: python daily_updates.py 
 
