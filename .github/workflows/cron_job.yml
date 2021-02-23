@@ -4,8 +4,8 @@ name: cron_job
 
 on:
   schedule:
-   # - cron:  '00 10 * * *' #every day at 10 when not in test mode
-    - cron:  '*/5 * * * *'
+    - cron:  '00 9 * * *' #every day at 10 CET when not in test mode
+   # - cron:  '*/5 * * * *'
 jobs:
   build:
     runs-on: windows-2019
@@ -21,8 +21,7 @@ jobs:
           pip install -r requirements_cron_job.txt
       - name: Run daily_updates
         run:  |
-         python database_manipulation.py
          python database_upd.py
          python cron_job_for_github.py
-        # python print('finished') 
+   
 
