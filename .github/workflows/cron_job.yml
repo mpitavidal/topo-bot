@@ -24,5 +24,5 @@ jobs:
          python database_manipulation.py
          python database_upd.py
          python cron_job_for_github.py
-         python print('finished') 
+        # python print('finished') 
 
